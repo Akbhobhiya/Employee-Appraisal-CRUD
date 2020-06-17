@@ -1,0 +1,62 @@
+<div class="panel panel-default bg-gradient-dark text-white">
+  <h2 style="color:MediumSeaGreen;">Add Employee Details</h2>
+  <div class="panel-body">
+    <form class="form-horizontal" (submit)="addEmployee()">
+      <div class="row form-group m-2">
+        <label for="emp_name" class="col-sm-2 control-label"><b style="color:#ee82ee;">Name :</b></label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="model.name" name="name">
+        </div>
+      </div>
+      <div class="form-group row m-2">
+        <label for="position" class="col-sm-2 control-label"><b style="color:#ee82ee;">Position : </b></label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="model.position" name="position">
+        </div>
+      </div>
+      <div class="form-group row m-2">
+        <label for="department" class="col-sm-2 control-label"><b style="color:#ee82ee;">Location :</b> </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="model.location" name="location">
+        </div>
+      </div>
+      <div class="form-group row m-2">
+        <label for="department" class="col-sm-2 control-label"><b style="color:#ee82ee;">Department : </b></label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="model.department" name="department">
+        </div>
+      </div>
+      <div class="form-group row m-2">
+        <label for="phone" class="col-sm-2 control-label"><b style="color:#ee82ee;">Phone Number :</b></label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="model.phone" name="phone">
+        </div>
+      </div>
+      <div class="form-group row m-2">
+        <label for="email" class="col-sm-2 control-label"><b style="color:#ee82ee;">Email :</b> </label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="model.email" name="email">
+        </div>
+      </div>
+      <div class="form-group row m-2">
+        <label for="salary" class="col-sm-2 control-label"><b style="color:#ee82ee;"> Salary :</b></label>
+        <div class="col-sm-9">
+          <input type="text" class="form-control" [(ngModel)]="model.salary" name="salary">
+        </div>
+      </div>
+    
+    
+      
+
+
+      <div class="form-group row">
+        <div class="col-sm-offset-2 col-sm-8">
+          <button type="submit" class="btn btn-success"><b><i>Add</i></b></button>
+          <a class="btn btn-info" (click)="goBack()"><b><i>Cancel</i></b></a>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+</div>

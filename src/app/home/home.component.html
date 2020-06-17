@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Employee details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Department</th>
+        <th>Location</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+			<td>{{employee.name}}</td>
+			<td>{{employee.position}}</td>
+			<td>{{employee.department}}</td>
+			<td>{{employee.location}}</td>
+			<td>{{employee.phone}}</td>
+			<td>{{employee.email}}</td>
+			<td>{{employee.salary}}</td>
+			<td width="275">
+				<a class="btn btn-info btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="View" routerLink="/show/{{employee._id}}"><i style="font-size:24px" class="fa fa-eye"></i></a>
+				<a class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit" routerLink="/edit/{{employee._id}}"><i style="font-size:24px" class="fa fa-edit"></i></a>
+				<a class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete" (click)="deleteEmployee(employee._id)"><i style="font-size:24px" class="fa fa-trash"></i> </a> 
+			</td>
+		</tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
